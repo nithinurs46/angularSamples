@@ -1,0 +1,10 @@
+<p>
+  address-card works!
+</p>
+<p>{{user1.name}}</p>
+<p>{{user1.email}}</p>
+<div *ngIf ="user1.phone.length">
+  <p>phone number: </p>
+<p *ngFor = "let phoneNumber of user1.phone">{{phoneNumber}}
+</p>
+</div>

@@ -1,0 +1,19 @@
+
+<div class="addressCardNew">
+<p>
+    address-card-new works!
+  </p>
+
+  <button *ngIf="isCollapsed" (click) = "toggleCollapse()">Expand</button>
+  <button *ngIf="!isCollapsed" (click) = "toggleCollapse()">Collapse</button>
+
+  <div *ngIf="!isCollapsed">
+  <p>{{userNew.name}}</p>
+  <p>{{userNew.address}}</p>
+  <div *ngIf ="userNew.phone.length">
+    <p>phone number: </p>
+  <p *ngFor = "let phoneNumber of userNew.phone">{{phoneNumber}}
+  </p>
+</div>
+  </div>
+</div>
