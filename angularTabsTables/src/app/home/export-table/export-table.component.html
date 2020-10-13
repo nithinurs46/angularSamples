@@ -1,0 +1,27 @@
+<table class="table table-sm table-bordered ">
+    <thead>
+    <tr style="background-color: rgb(218, 234, 245)">
+      <th width="4" scope="col"></th>
+      <th scope="col">Col 1</th>
+      <th scope="col">Col 2</th>
+      <th scope="col">Col 3</th>
+      <th scope="col">Col 4</th>
+      <th scope="col">Col 5</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let case of caseData; index as i">
+      <!--<th scope="row">{{ i + 1 }}</th>-->
+      <td width="4"><input type="checkbox"/></td>
+      <td>
+        {{ case.col1 }}
+      </td>
+      <td>{{ case.col2 }}</td>
+      <td>{{ case.col3 }}</td>
+      <td>{{ case.col4 }}</td>
+      <td>{{ case.col5 }}</td>
+    </tr>
+    </tbody>
+  </table>
+  <ngb-pagination class="d-flex justify-content-end" [collectionSize]="totalRecords" [(page)]="page" [boundaryLinks]="true"
+  [maxSize]="5" [rotate]="true" [ellipses]="false" size="sm" (pageChange)="loadPage($event)"></ngb-pagination>

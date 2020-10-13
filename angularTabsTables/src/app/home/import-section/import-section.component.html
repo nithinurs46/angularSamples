@@ -1,0 +1,10 @@
+<app-menu></app-menu>
+<p-breadcrumb [model]="breadCumb" [home]="home"></p-breadcrumb>
+<p-tabView (onChange)="onTabChange($event)">
+  <p-tabPanel header="Tab 1" >
+    <app-import-table [selectedTab]="tabIndex" ></app-import-table>
+  </p-tabPanel>
+  <p-tabPanel header="Tab 2" >
+      <app-import-table [selectedTab]="tabIndex"></app-import-table>
+  </p-tabPanel>
+</p-tabView>

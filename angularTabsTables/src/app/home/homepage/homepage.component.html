@@ -1,0 +1,38 @@
+
+<app-menu [userId]="userName" ></app-menu>
+
+<p-tabView>
+        <p-tabPanel header="Tab 1">
+           Content 1
+        </p-tabPanel>
+        <p-tabPanel header="Tab 2">
+            Content 2
+        </p-tabPanel>
+        <p-tabPanel header="Tab 3">
+            Content 3
+        </p-tabPanel>
+    </p-tabView>
+
+<p-accordion>
+    <p-accordionTab header="Search" selected="true">
+       Content 1
+</p-accordionTab>
+
+<DIV class="row" style="height: auto !important; display: block !important; min-height: auto !important;">
+    <DIV class="col-6" style="width: 50%;">
+        <p-accordion [multiple]="true">
+            <p-accordionTab header="Count" selected="true">
+                <p-chart type="bar" [data]="barData"></p-chart>
+            </p-accordionTab>
+    </p-accordion>
+    </DIV>
+    <DIV class="col-6" style="width: 50%;">
+        <p-accordion [multiple]="true" >
+            <p-accordionTab header="Summary" selected="true" >
+               <p-chart type="pie" [data]="pieData"></p-chart>
+            </p-accordionTab>
+    </p-accordion>
+    </DIV>
+</DIV>
+
+

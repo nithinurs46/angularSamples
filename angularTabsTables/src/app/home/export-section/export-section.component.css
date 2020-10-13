@@ -1,0 +1,8 @@
+.breadcumb{
+    background-color: rgb(218, 234, 245);
+    border-color: rgb(218, 234, 245);
+    padding: .1rem .1rem;
+}
+.body-color{
+    background-color: rgba(0, 0, 0, 0.014);
+}

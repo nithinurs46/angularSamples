@@ -1,0 +1,24 @@
+<app-menu></app-menu>
+<body class="body-color">
+<div  class="container-fluid">
+<ngb-alert class="breadcumb">
+  Home >> Export
+</ngb-alert>
+
+<ngb-tabset (tabChange)="onTabChange($event)">
+  <ngb-tab title="Tab 1" id="01">
+      <ng-template ngbTabContent>
+        <app-export-table [selectedTab]="tabIndex"></app-export-table>
+      </ng-template>
+  </ngb-tab>
+  <ngb-tab id="02">
+    <ng-template ngbTabTitle>
+      <b>Tab 2</b>
+    </ng-template>
+    <ng-template ngbTabContent>
+      <app-export-table [selectedTab]="tabIndex"></app-export-table>
+    </ng-template>
+  </ngb-tab>
+</ngb-tabset>
+</div>
+</body>
